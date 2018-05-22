@@ -1,7 +1,7 @@
 <template>
     <section class="events">
         <div class="container">
-            <h1>События</h1>
+            <h3>События</h3>
         </div>
         <div class="events__item-container" v-for="(event, index) in events" :key="index"
              v-b-toggle="'collapse' + index">

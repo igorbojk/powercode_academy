@@ -1,6 +1,7 @@
 <template>
     <div>
         <app-header></app-header>
+        <banner></banner>
         <our-courses></our-courses>
         <events></events>
         <gallery></gallery>
@@ -10,6 +11,7 @@
 
 <script>
     import AppHeader from './app-header.vue';
+    import Banner from './banner.vue';
     import  OurCourses from './our-courses.vue';
     import Events from './events.vue';
     import Gallery from './gallery';
@@ -19,6 +21,7 @@
         name: "app-main",
         components: {
             AppHeader,
+            Banner,
             OurCourses,
             Events,
             Gallery,

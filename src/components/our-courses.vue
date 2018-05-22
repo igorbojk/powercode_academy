@@ -1,7 +1,7 @@
 <template>
     <section class="courses">
         <div class="container">
-            <h1>Наши курсы</h1>
+            <h3>Наши курсы</h3>
             <div class="row courses__container">
                 <div class="col-xl-4 col-md-6" v-for="(course, index) in courses" :key="index">
                     <div class="courses__item">
@@ -52,9 +52,10 @@
         padding: 68px 0 80px;
         background: $white-bg;
         text-align: center;
-        h1 {
-            font-weight: bold;
+        h3 {
+            font-weight: 900;
             margin-bottom: 68px;
+            text-transform: uppercase;
         }
         &__container {
 

@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import BootstrapVue from "bootstrap-vue";
-import App from './App.vue';
 import 'bootstrap/dist/css/bootstrap.css'
 import "bootstrap-vue/dist/bootstrap-vue.css";
+import App from './App.vue';
 import {store} from './store/store';
+import 'slick-carousel/slick/slick.css';
 
 Vue.use(BootstrapVue);
 
