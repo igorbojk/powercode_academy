@@ -1,5 +1,6 @@
 <template>
     <section class="courses">
+        <div class="Rectangle-4-Copy"></div>
         <div class="container">
             <h3>Наши курсы</h3>
             <div class="row courses__container">
@@ -17,12 +18,20 @@
                             {{course.title}}
                         </div>
                         <div class="courses__item-duration">
-                            <div class="duration" v-for="(duration, index) in course.durations" :key="index">
+                            <div class="duration">
                                 <div class="duration__icon">
                                     icon
                                 </div>
                                 <div class="duration__text">
-                                    {{duration}}
+                                    {{course.duration}}
+                                </div>
+                            </div>
+                            <div class="duration">
+                                <div class="duration__icon">
+                                    icon
+                                </div>
+                                <div class="duration__text">
+                                    {{course.lessons}}
                                 </div>
                             </div>
                         </div>
@@ -52,6 +61,18 @@
         padding: 68px 0 80px;
         background: $white-bg;
         text-align: center;
+        position: relative;
+        overflow: hidden;
+        .Rectangle-4-Copy {
+            height: 1100px;
+            width: 1100px;
+            bottom: -100px;
+            left: -1050px;
+            transform: rotate(45deg);
+            border-radius: 200px;
+            background-color: #dfecff;
+            position: absolute;
+        }
         h3 {
             font-weight: 900;
             margin-bottom: 68px;
@@ -76,14 +97,24 @@
             .level {
                 text-transform: uppercase;
                 color: $primary;
-                font-size: 14px;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.25;
+                letter-spacing: normal;
             }
         }
         &__item-title {
-            color: black;
-            font-size: 20px;
-            font-weight: bold;
+            color: $black;
             margin: 70px 0 48px;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.25;
+            letter-spacing: normal;
+            text-align: center;
         }
         &__item-duration {
             display: flex;
@@ -95,7 +126,12 @@
                 }
                 &__text {
                     color: $primary;
-                    font-size: 14px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.25;
+                    letter-spacing: normal;
                 }
             }
         }

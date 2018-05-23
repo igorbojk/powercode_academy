@@ -2,6 +2,7 @@
     <div>
         <app-header></app-header>
         <banner></banner>
+        <helper-menu></helper-menu>
         <our-courses></our-courses>
         <events></events>
         <gallery></gallery>
@@ -16,6 +17,7 @@
     import Events from './events.vue';
     import Gallery from './gallery';
     import History from './history';
+    import HelperMenu from './helper-menu.vue';
 
     export default {
         name: "app-main",
@@ -25,7 +27,8 @@
             OurCourses,
             Events,
             Gallery,
-            History
+            History,
+            HelperMenu
         }
     }
 </script>

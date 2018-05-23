@@ -17,19 +17,17 @@
 
 <style lang="scss">
     @import "scss/_colors.scss";
-    @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700|Roboto:300,400,500,700,900&subset=cyrillic,cyrillic-ext');
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900|Roboto:300,400,500,700,900&subset=cyrillic,cyrillic-ext');
     #app {
         font-family: 'Roboto', sans-serif;
-        h1,h2,h3,h4,h5,h6{
-            font-family: 'Montserrat', sans-serif;
-        }
         h1{
-            font-size: 72px;
+            font-size: 54px;
             font-weight: bold;
             font-style: normal;
             font-stretch: normal;
             line-height: 1.14;
             letter-spacing: normal;
+            font-family: 'Montserrat', sans-serif;
         }
         h3{
             font-size: 48px;
@@ -39,6 +37,7 @@
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .btn{
@@ -53,11 +52,16 @@
             letter-spacing: normal;
             text-align: center;
             color: #52489c;
+            border-radius: 30px;
+            font-size: 20px;
             &.large{
                 border-radius: 100px;
                 padding: 24px 32px;
                 font-size: 20px;
                 line-height: 20px;
+            }
+            &.small{
+                font-size: 16px;
             }
             &.primary{
                 background: $white;

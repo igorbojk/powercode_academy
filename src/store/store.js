@@ -1,82 +1,66 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-
+// import androidImg from '../assets/android.svg';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
         courses: [
             {
-                icon: 'android',
+                icon: 'androidImg',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             },
             {
                 icon: 'php',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             },
             {
                 icon: 'js',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
-                durations: [
-                    '4 месяца',
-                    '2 часа / нед.'
-                ]
+                duration: '4 месяца',
+                lessons: '2 часа / нед.'
             }
         ],
         events: [
@@ -88,7 +72,7 @@ export const store = new Vuex.Store({
                 price: '1150 грн.'
             },
             {
-                icon: 'php',
+                icon: '../assets/android.svg',
                 title: 'Создание приложений под андроид',
                 date: '24 сентября',
                 duration: ['4 месяца', '2 часа / нед.'],

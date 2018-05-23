@@ -10,13 +10,13 @@
                     <div class="col">
                         <div class="event">
                             <div class="event__icon">
-                                {{event.icon}}
+                                <img :src="'../assets/android.svg'" alt="">
                             </div>
                             <div class="event__title">
                                 {{event.title}}
                             </div>
                             <div class="event__date">
-                                <b-collapse :id="'collapse' + index" accordion="test">
+                                <b-collapse :id="'collapse' + index" accordion="event">
                                     <div>icon</div>
                                 </b-collapse>
                                 <div>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="event__duration">
                                 <span>
-                                   <b-collapse :id="'collapse' + index" accordion="test">
+                                   <b-collapse :id="'collapse' + index" accordion="event">
                                         icon
                                     </b-collapse>
                                 </span>
@@ -36,8 +36,13 @@
                                 <div>
                                     {{event.price}}
                                 </div>
-                                <b-collapse :id="'collapse' + index" accordion="test">
-                                    <div>text</div>
+                                <b-collapse :id="'collapse' + index" accordion="event">
+                                    <div>
+                                        <button type="button" class="btn primary">Записаться</button>
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn secondary small">Подробнее</button>
+                                    </div>
                                 </b-collapse>
                             </div>
 
@@ -67,14 +72,13 @@
         background-image: linear-gradient(to right, #7a76e1, #659bee);
         text-align: center;
         padding: 69px 0 74px;
-        h1 {
+        h3 {
             color: $white;
-            font-weight: bold;
             margin-bottom: 68px;
         }
         .events__item-container {
             &[aria-expanded="true"]{
-                background: lightgray;
+                background: rgba(255, 255, 255, .15);
             }
         }
         .event {
@@ -89,27 +93,59 @@
                 flex: 1 1 auto;
                 text-align: left;
                 width: 60px;
+                text-align: center;
             }
             &__title {
-                font-weight: bold;
-                font-size: 20px;
                 flex: 4 1 auto;
                 text-align: left;
+                font-size: 24px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
             }
             &__date {
                 flex: 2 1 auto;
+                font-size: 16px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
             }
             &__duration {
                 flex: 2 1 auto;
                 display: flex;
                 flex-wrap: wrap;
                 max-width: 228px;
+                width: 228px;
                 span {
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.25;
+                    letter-spacing: normal;
+                    text-align: center;
                     width: 100%;
                 }
             }
             &__price {
                 flex: 2 1 auto;
+                font-size: 24px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                width: 100px;
+                button{
+                    margin: 10px 0;
+                    text-transform: none !important;
+                }
             }
         }
     }
