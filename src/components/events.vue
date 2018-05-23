@@ -1,7 +1,7 @@
 <template>
     <section class="events">
         <div class="container">
-            <h3>События</h3>
+            <h3>события</h3>
         </div>
         <div class="events__item-container" v-for="(event, index) in events" :key="index"
              v-b-toggle="'collapse' + index">
@@ -10,14 +10,14 @@
                     <div class="col">
                         <div class="event">
                             <div class="event__icon">
-                                <img :src="'../assets/android.svg'" alt="">
+                                <img :src="'icons/' + event.icon + '.svg'" alt="">
                             </div>
                             <div class="event__title">
                                 {{event.title}}
                             </div>
                             <div class="event__date">
                                 <b-collapse :id="'collapse' + index" accordion="event">
-                                    <div>icon</div>
+                                    <img :src="'icons/rocket_2.svg'" alt="">
                                 </b-collapse>
                                 <div>
                                     {{event.date}}
@@ -26,7 +26,7 @@
                             <div class="event__duration">
                                 <span>
                                    <b-collapse :id="'collapse' + index" accordion="event">
-                                        icon
+                                        <img :src="'icons/clock.svg'" alt="">
                                     </b-collapse>
                                 </span>
 
@@ -61,7 +61,8 @@
             events() {
                 return this.$store.state.events;
             }
-        }
+        },
+
     }
 </script>
 
@@ -114,6 +115,9 @@
                 line-height: normal;
                 letter-spacing: normal;
                 text-align: center;
+                img{
+                    margin-bottom: 28px;
+                }
             }
             &__duration {
                 flex: 2 1 auto;
@@ -130,6 +134,9 @@
                     letter-spacing: normal;
                     text-align: center;
                     width: 100%;
+                    &:first-child{
+                        margin-bottom: 18px;
+                    }
                 }
             }
             &__price {

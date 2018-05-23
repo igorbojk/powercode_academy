@@ -7,6 +7,7 @@
         <events></events>
         <gallery></gallery>
         <history></history>
+        <faq></faq>
     </div>
 </template>
 
@@ -18,6 +19,7 @@
     import Gallery from './gallery';
     import History from './history';
     import HelperMenu from './helper-menu.vue';
+    import Faq from './faq.vue'
 
     export default {
         name: "app-main",
@@ -28,7 +30,8 @@
             Events,
             Gallery,
             History,
-            HelperMenu
+            HelperMenu,
+            Faq
         }
     }
 </script>

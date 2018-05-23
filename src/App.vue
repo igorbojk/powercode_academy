@@ -38,6 +38,7 @@
             letter-spacing: normal;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
         }
 
         .btn{

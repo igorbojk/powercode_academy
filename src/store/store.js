@@ -1,13 +1,12 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import androidImg from '../assets/android.svg';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
         courses: [
             {
-                icon: 'androidImg',
+                icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
@@ -72,7 +71,7 @@ export const store = new Vuex.Store({
                 price: '1150 грн.'
             },
             {
-                icon: '../assets/android.svg',
+                icon: 'php',
                 title: 'Создание приложений под андроид',
                 date: '24 сентября',
                 duration: ['4 месяца', '2 часа / нед.'],

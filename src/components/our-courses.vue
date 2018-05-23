@@ -8,7 +8,7 @@
                     <div class="courses__item">
                         <div class="courses__item-header">
                             <div class="icon">
-                                {{course.icon}}
+                                <img :src="'icons/' + course.icon + '.svg'" alt="">
                             </div>
                             <div class="level">
                                 {{course.level}}
@@ -20,7 +20,7 @@
                         <div class="courses__item-duration">
                             <div class="duration">
                                 <div class="duration__icon">
-                                    icon
+                                    <img :src="'icons/clock.svg'" alt="">
                                 </div>
                                 <div class="duration__text">
                                     {{course.duration}}
@@ -28,7 +28,7 @@
                             </div>
                             <div class="duration">
                                 <div class="duration__icon">
-                                    icon
+                                    <img :src="'icons/clock.svg'" alt="">
                                 </div>
                                 <div class="duration__text">
                                     {{course.lessons}}
@@ -91,8 +91,8 @@
         &__item-header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             .icon {
-                color: $green;
             }
             .level {
                 text-transform: uppercase;
@@ -122,7 +122,8 @@
             .duration {
                 margin: 0 20px;
                 &__icon {
-                    color: $primary
+                    color: $primary;
+                    margin-bottom: 13px;
                 }
                 &__text {
                     color: $primary;

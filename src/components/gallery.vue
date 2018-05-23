@@ -1,8 +1,8 @@
 <template>
     <section class="gallery">
-        <h1>
-            Галерея
-        </h1>
+        <h3>
+            галерея
+        </h3>
         <div class="container-fluid">
             <div class="row gallery__row">
                 <div class="col-3 bg1">
@@ -42,7 +42,7 @@
     .gallery {
         background: $white-bg;
         padding-top: 68px;
-        h1{
+        h3{
             margin-bottom: 68px;
             text-align: center;
         }

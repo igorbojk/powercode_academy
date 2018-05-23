@@ -1,7 +1,7 @@
 <template>
     <section class="history">
         <div class="container">
-            <h3>Истории успеха</h3>
+            <h3>истории успеха</h3>
             <div class="slider-container">
                 <div class="row">
                     <div class="col-8 offset-2 position-static">
@@ -53,6 +53,7 @@
                                 </div>
                             </div>
 
+
                         </slick>
                         <slick ref="slick2" class="thumbnail-slider" :options="slickThumbnailOptions">
                             <div class="thumbnail-slider__item">
@@ -76,7 +77,6 @@
                             <div class="thumbnail-slider__item">
                                 <div class="thumbnail-slider__avatar"></div>
                             </div>
-
                         </slick>
                     </div>
                 </div>
@@ -101,13 +101,11 @@
                     arrows: false
                 },
                 slickThumbnailOptions: {
-                    slidesToShow: 5,
+                    slidesToShow: 6,
                     slidesToScroll: 1,
                     arrows: false,
                     asNavFor: '.main-slider',
                     centerMode: true,
-                    focusOnSelect: true,
-                    infinity: true,
                 },
             }
         },
@@ -135,8 +133,7 @@
             padding-bottom: 80px;
             position: relative;
         }
-        h1 {
-            font-weight: bold;
+        h3 {
             text-align: center;
             margin-bottom: 64px;
         }
@@ -194,7 +191,7 @@
                 width: 96px;
                 height: 96px;
                 background: $blue;
-                opacity: 0.8;
+                opacity: 0.5;
                 border-radius: 100%;
                 margin: auto;
                 transform: scale(.8);
