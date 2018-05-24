@@ -87,11 +87,20 @@
             border-radius: 15px;
             padding: 40px;
             margin-bottom: 30px;
+            transition: all .3s;
+            &:hover{
+                margin-top: -15px;
+                margin-left: -15px;
+                margin-right: -15px;
+                margin-bottom: -15px;
+                padding: 55px;
+            }
         }
         &__item-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 40px;
             .icon {
             }
             .level {

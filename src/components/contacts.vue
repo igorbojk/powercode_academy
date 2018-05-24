@@ -2,16 +2,15 @@
     <section class="contacts">
         <div class="contacts__map">
             <GmapMap
-                    :center="mapCenter"
-                    :zoom="7"
-                    map-type-id="terrain"
-                    style="width: 100%; height: 100%"
+                :center="mapCenter"
+                :zoom="13"
+                style="width: 100%; height: 100%"
             >
                 <GmapMarker
-                :position="mapCenter"
-                :clickable="false"
-                :draggable="false"
-                :icon="{url: 'icons/map_marker.svg'}"
+                    :position="mapCenter"
+                    :clickable="false"
+                    :draggable="false"
+                    :icon="{url: 'icons/map_marker.svg'}"
                 />
             </GmapMap>
         </div>
@@ -106,8 +105,8 @@
     import * as VueGoogleMaps from 'vue2-google-maps';
 
     const CITY_COORDINATES = {
-        'kiev': {lat:50.2716, lng:30.3125},
-        'zaporozhye': {lat: 47.49, lng: 35.10}
+        'kiev': {lat:50.3986645, lng:30.5145269},
+        'zaporozhye': {lat: 47.8159257, lng: 35.1685269}
 
     };
 

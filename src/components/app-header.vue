@@ -56,7 +56,7 @@
         z-index: 997;
         transition: all .3s;
         &__container {
-            max-width: 1170px;
+            max-width: 1130px;
             margin: auto;
         }
         &.scroll{
@@ -77,6 +77,7 @@
         line-height: normal;
         letter-spacing: normal;
         text-transform: uppercase;
+        text-align: center;
     }
 
     .navbar-light .navbar-nav .nav-link {

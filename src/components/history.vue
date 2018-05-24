@@ -98,14 +98,15 @@
                     fade: true,
                     slidesToScroll: 1,
                     asNavFor: '.thumbnail-slider',
-                    arrows: false
+                    arrows: false,
                 },
                 slickThumbnailOptions: {
-                    slidesToShow: 6,
+                    slidesToShow: 5,
                     slidesToScroll: 1,
                     arrows: false,
                     asNavFor: '.main-slider',
                     centerMode: true,
+                    focusOnSelect: true,
                 },
             }
         },
@@ -122,7 +123,7 @@
     }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     @import "../scss/_colors.scss";
 
     .history {
@@ -202,6 +203,12 @@
                     opacity: 1;
                     transform: scale(1);
                 }
+            }
+            &>div{
+                padding: 0 !important;
+            }
+            .slick-list{
+                padding: 0 !important;
             }
         }
 
