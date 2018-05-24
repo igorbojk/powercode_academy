@@ -8,6 +8,8 @@
         <gallery></gallery>
         <history></history>
         <faq></faq>
+        <contacts></contacts>
+        <copyright></copyright>
     </div>
 </template>
 
@@ -19,7 +21,9 @@
     import Gallery from './gallery';
     import History from './history';
     import HelperMenu from './helper-menu.vue';
-    import Faq from './faq.vue'
+    import Faq from './faq.vue';
+    import Contacts from './contacts.vue';
+    import Copyright from './copyright.vue'
 
     export default {
         name: "app-main",
@@ -31,7 +35,9 @@
             Gallery,
             History,
             HelperMenu,
-            Faq
+            Faq,
+            Contacts,
+            Copyright
         }
     }
 </script>

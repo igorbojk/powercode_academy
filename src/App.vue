@@ -20,27 +20,6 @@
     @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900|Roboto:300,400,500,700,900&subset=cyrillic,cyrillic-ext');
     #app {
         font-family: 'Roboto', sans-serif;
-        h1{
-            font-size: 54px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.14;
-            letter-spacing: normal;
-            font-family: 'Montserrat', sans-serif;
-        }
-        h3{
-            font-size: 48px;
-            font-weight: 900;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            letter-spacing: normal;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-        }
-
         .btn{
             color: $primary;
             border: solid 2px $white;
@@ -72,6 +51,31 @@
                 background: none;
             }
         }
+        .flex-container{
+            display: flex;
+        }
+    }
+
+    h1{
+        font-size: 54px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.14;
+        letter-spacing: normal;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    h3{
+        font-size: 48px;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
     }
 
 </style>

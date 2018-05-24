@@ -20,7 +20,7 @@
                         <div class="courses__item-duration">
                             <div class="duration">
                                 <div class="duration__icon">
-                                    <img :src="'icons/clock.svg'" alt="">
+                                    <img :src="'icons/calendar.svg'" alt="">
                                 </div>
                                 <div class="duration__text">
                                     {{course.duration}}
@@ -28,7 +28,7 @@
                             </div>
                             <div class="duration">
                                 <div class="duration__icon">
-                                    <img :src="'icons/clock.svg'" alt="">
+                                    <img :src="'icons/clock_2.svg'" alt="">
                                 </div>
                                 <div class="duration__text">
                                     {{course.lessons}}
