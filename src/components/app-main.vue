@@ -2,8 +2,9 @@
     <div>
         <app-header></app-header>
         <banner></banner>
-        <helper-menu></helper-menu>
+        <!--<helper-menu></helper-menu>-->
         <our-courses></our-courses>
+        <advantages></advantages>
         <events></events>
         <gallery></gallery>
         <history></history>
@@ -16,7 +17,8 @@
 <script>
     import AppHeader from './app-header.vue';
     import Banner from './banner.vue';
-    import  OurCourses from './our-courses.vue';
+    import OurCourses from './our-courses.vue';
+    import Advantages from './advantages.vue'
     import Events from './events.vue';
     import Gallery from './gallery';
     import History from './history';
@@ -37,7 +39,8 @@
             HelperMenu,
             Faq,
             Contacts,
-            Copyright
+            Copyright,
+            Advantages
         }
     }
 </script>

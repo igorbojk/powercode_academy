@@ -6,6 +6,9 @@ import App from './App.vue';
 import {store} from './store/store';
 import 'slick-carousel/slick/slick.css';
 
+
+
+
 Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false;

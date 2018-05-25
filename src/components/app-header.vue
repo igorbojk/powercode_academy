@@ -1,5 +1,17 @@
 <template>
     <div class="header">
+        <div class="header__sub-block">
+            <div class="header__container">
+                <div class="header__contact">
+                    <img :src="'icons/icon-mail.svg'" alt="mail icon">
+                    <a href="mailto:student@mainacad.com">student@mainacad.com</a>
+                </div>
+                <div class="header__contact">
+                    <img :src="'icons/icon-phone.svg'"  alt="phone icon">
+                    <a href="tel:+38 (067) 225 88 77">+38 (067) 225 88 77</a>
+                </div>
+            </div>
+        </div>
         <div class="header__container">
             <b-navbar toggleable="md">
                 <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
@@ -12,7 +24,7 @@
                     <b-navbar-nav class="ml-auto">
                         <b-nav-item href="#">О нас</b-nav-item>
                         <b-nav-item href="#">Курсы</b-nav-item>
-                        <b-nav-item href="#">расписание</b-nav-item>
+                        <b-nav-item href="#">События</b-nav-item>
                         <b-nav-item href="#">Трудоустройство</b-nav-item>
                         <b-nav-item href="#">Контакты</b-nav-item>
                         <b-nav-item href="#" class="secondary-brand">powercode.us</b-nav-item>
@@ -48,7 +60,7 @@
 
     .header {
         border-bottom: 1px solid rgba(255, 255, 255, .2);
-        padding: 40px 0;
+        padding-bottom: 18px;
         position: fixed;
         top: 0;
         right: 0;
@@ -59,10 +71,44 @@
             max-width: 1130px;
             margin: auto;
         }
+        &__sub-block{
+            height: 40px;
+            background: rgba(12, 22, 71, 0.1);
+            margin-bottom: 18px;
+            overflow: hidden;
+            transition: all .3s;
+            .header__container{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                height: 100%;
+            }
+        }
+        &__contact{
+            margin-left: 40px;
+            opacity: 0.75;
+            img{
+                height: 16px;
+                width: auto;
+                margin-right: 10px;
+            }
+            a{
+                font-family: Helvetica;
+                font-size: 14px;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                color: #d8f6f6;
+            }
+        }
         &.scroll{
-            padding: 0;
+            padding-bottom: 8px;
             background-image: linear-gradient(to right, #5e79cf, #54b5c3);;
-            .navbar-light .navbar-nav .nav-link{
+            .header__sub-block{
+                height: 0;
+                margin-bottom: 8px;
             }
         }
     }
@@ -86,7 +132,7 @@
 
     .navbar-light .navbar-nav .secondary-brand .nav-link {
         font-family: Helvetica;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
@@ -94,6 +140,7 @@
         letter-spacing: normal;
         color: #c1f2fe;
         font-weight: normal;
+        text-transform: none ;
         margin: 0;
     }
     .navbar{

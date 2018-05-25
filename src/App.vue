@@ -36,9 +36,14 @@
             font-size: 20px;
             &.large{
                 border-radius: 100px;
-                padding: 24px 32px;
-                font-size: 20px;
+                padding: 16px 32px;
+                font-size: 16px;
                 line-height: 20px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                letter-spacing: normal;
+                text-align: center;
             }
             &.small{
                 font-size: 16px;
@@ -76,6 +81,18 @@
         text-align: center;
         font-family: 'Montserrat', sans-serif;
         text-transform: uppercase;
+    }
+
+    @keyframes pulse {
+       from {
+           transform: scale(1);
+       }
+        50% {
+            transform: scale(1.02);
+        }
+        to{
+            transform: scale(1);
+        }
     }
 
 </style>

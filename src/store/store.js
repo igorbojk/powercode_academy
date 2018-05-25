@@ -4,62 +4,79 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
+        filteredCourses: [],
         courses: [
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'kiev',
+                id: 1
             },
             {
                 icon: 'php',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'kiev',
+                id: 2
             },
             {
                 icon: 'js',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'kiev',
+                id: 3
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'kiev',
+                id: 4
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'kiev',
+                id: 5
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'zaporozhye',
+                id: 6
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'zaporozhye',
+                id: 7
             },
             {
                 icon: 'android',
                 level: 'для новичков',
                 title: 'Создание приложений под андроид',
                 duration: '4 месяца',
-                lessons: '2 часа / нед.'
+                lessons: '2 часа / нед.',
+                city: 'zaporozhye',
+                id: 8
             }
         ],
         events: [
@@ -144,11 +161,17 @@ export const store = new Vuex.Store({
         increment(state, payload) {
             state.count++;
             state.text = payload;
+        },
+        changeCity(state, city){
+            state.filteredCourses = state.courses.filter(i => i.city === city);
         }
     },
     actions: {
         increment({commit}, text) {
             commit('increment', text)
+        },
+        changeCity ({ commit }, city) {
+            commit('changeCity', city)
         }
-    }
+    },
 });

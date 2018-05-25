@@ -1,10 +1,19 @@
 <template>
     <section class="courses">
-        <div class="Rectangle-4-Copy"></div>
+
         <div class="container">
             <h3>Наши курсы</h3>
-            <div class="row courses__container">
-                <div class="col-xl-4 col-md-6" v-for="(course, index) in courses" :key="index">
+            <div class="courses__tabs">
+                <span class="tab" @click="filterCourses('kiev')" v-bind:class="{ active: activeCity === 'kiev' }">
+                    Киев
+                </span>
+                <span class="tab" @click="filterCourses('zaporozhye')"
+                      v-bind:class="{ active: activeCity === 'zaporozhye' }">
+                    Запорожье
+                </span>
+            </div>
+            <transition-group name="fade" tag="div" class="row courses__container">
+                <div class="col-xl-4 col-md-6" v-for="course in courses" :key="course.id">
                     <div class="courses__item">
                         <div class="courses__item-header">
                             <div class="icon">
@@ -37,7 +46,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </transition-group>
+
         </div>
     </section>
 
@@ -48,7 +58,22 @@
         name: "our-courses",
         computed: {
             courses() {
-                return this.$store.state.courses;
+                return this.$store.state.filteredCourses;
+            },
+        },
+        mounted() {
+            this.$store.dispatch('changeCity', 'kiev');
+        },
+        methods: {
+            filterCourses(city) {
+                this.activeCity = city;
+                this.$store.dispatch('changeCity', city);
+            }
+        },
+        data() {
+            return {
+                activeCity: 'kiev',
+                idx: 0,
             }
         }
     }
@@ -57,26 +82,67 @@
 <style scoped lang="scss">
     @import "../scss/_colors.scss";
 
+    .fade-enter-active {
+        animation: fade-in .9s ;
+    }
+
+    .fade-leave-active {
+        display: none;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
     .courses {
         padding: 68px 0 80px;
         background: $white-bg;
         text-align: center;
         position: relative;
         overflow: hidden;
-        .Rectangle-4-Copy {
-            height: 1100px;
-            width: 1100px;
-            bottom: -100px;
-            left: -1050px;
-            transform: rotate(45deg);
-            border-radius: 200px;
-            background-color: #dfecff;
-            position: absolute;
-        }
+
         h3 {
             font-weight: 900;
-            margin-bottom: 68px;
+            margin-bottom: 45px;
             text-transform: uppercase;
+        }
+        &__tabs {
+            text-align: center;
+            margin-bottom: 50px;
+            .tab {
+                margin: 0 20px;
+                font-family: Helvetica;
+                font-size: 16px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #5493c6;
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    width: 0;
+                    transition: width .3s ease-in-out;
+                    height: 2px;
+                    background: #5493c6;
+                }
+                &:hover, &.active {
+                    cursor: pointer;
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
         }
         &__container {
 
@@ -87,13 +153,14 @@
             border-radius: 15px;
             padding: 40px;
             margin-bottom: 30px;
-            transition: all .3s;
-            &:hover{
-                margin-top: -15px;
+            /*transition: all .3s;*/
+            &:hover {
+                /*margin-top: -15px;
                 margin-left: -15px;
                 margin-right: -15px;
                 margin-bottom: -15px;
-                padding: 55px;
+                padding: 55px;*/
+                cursor: pointer;
             }
         }
         &__item-header {

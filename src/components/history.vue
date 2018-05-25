@@ -52,30 +52,48 @@
                                     Алексей Дубинин
                                 </div>
                             </div>
+                            <div class="main-slider__item">
+                                <div class="desc">
+                                    В июне 2017 начал обучение на курсе Java Elementary, который окончил с лучшим рейтингом в группе. Участвовал в проекте Hillel Evo и после нескольких этапов собеседований устроился на позицию Java разработчика в Приват Банк.
+                                </div>
+                                <div class="name">
+                                    Алексей Дубинин
+                                </div>
+                            </div>
+                            <div class="main-slider__item">
+                                <div class="desc">
+                                    В июне 2017 начал обучение на курсе Java Elementary, который окончил с лучшим рейтингом в группе. Участвовал в проекте Hillel Evo и после нескольких этапов собеседований устроился на позицию Java разработчика в Приват Банк.
+                                </div>
+                                <div class="name">
+                                    Алексей Дубинин
+                                </div>
+                            </div>
 
 
                         </slick>
                         <slick ref="slick2" class="thumbnail-slider" :options="slickThumbnailOptions">
                             <div class="thumbnail-slider__item">
-                                <div class="thumbnail-slider__avatar"></div>
+                                <div class="thumbnail-slider__avatar" v-bind:style="{ 'background-image': 'url(images/face_1.jpg)' }">
+                                </div>
                             </div>
                             <div class="thumbnail-slider__item">
-                                <div class="thumbnail-slider__avatar"></div>
+                                <div class="thumbnail-slider__avatar" v-bind:style="{ 'background-image': 'url(images/face_2.jpg)' }"></div>
                             </div>
                             <div class="thumbnail-slider__item">
-                                <div class="thumbnail-slider__avatar"></div>
+                                <div class="thumbnail-slider__avatar" v-bind:style="{ 'background-image': 'url(images/face_3.jpg)' }"></div>
                             </div>
                             <div class="thumbnail-slider__item">
-                                <div class="thumbnail-slider__avatar"></div>
+                                <div class="thumbnail-slider__avatar" v-bind:style="{ 'background-image': 'url(images/face_4.jpg)' }"></div>
                             </div>
                             <div class="thumbnail-slider__item">
-                                <div class="thumbnail-slider__avatar"></div>
+                                <div class="thumbnail-slider__avatar" v-bind:style="{ 'background-image': 'url(images/face_5.jpg)' }"></div>
                             </div>
                             <div class="thumbnail-slider__item">
-                                <div class="thumbnail-slider__avatar"></div>
+                                <div class="thumbnail-slider__avatar" v-bind:style="{ 'background-image': 'url(images/face_1.jpg)' }">
+                                </div>
                             </div>
                             <div class="thumbnail-slider__item">
-                                <div class="thumbnail-slider__avatar"></div>
+                                <div class="thumbnail-slider__avatar" v-bind:style="{ 'background-image': 'url(images/face_2.jpg)' }"></div>
                             </div>
                         </slick>
                     </div>
@@ -196,6 +214,10 @@
                 border-radius: 100%;
                 margin: auto;
                 transform: scale(.8);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: all .3s;
             }
 
             .slick-current{
@@ -204,7 +226,7 @@
                     transform: scale(1);
                 }
             }
-            &>div{
+            & > div{
                 padding: 0 !important;
             }
             .slick-list{
