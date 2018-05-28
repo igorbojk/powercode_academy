@@ -10,7 +10,7 @@
                         :position="mapCenter"
                         :clickable="false"
                         :draggable="false"
-                        :icon="{url: 'icons/map_marker.svg', class: 'test'}"
+                        :icon="{url: 'icons/marker.svg'}"
                 />
             </GmapMap>
         </div>
