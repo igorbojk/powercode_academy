@@ -173,9 +173,9 @@ export const store = new Vuex.Store({
         changeCity ({ commit }, city) {
             return new Promise((resolve) => {
                 setTimeout(() => {
-                    commit('changeCity', city)
+                    commit('changeCity', city);
                     resolve()
-                })
+                }, 300)
             })
         }
     },

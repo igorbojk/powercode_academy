@@ -2,15 +2,15 @@
     <section class="contacts">
         <div class="contacts__map">
             <GmapMap
-                :center="mapCenter"
-                :zoom="13"
-                style="width: 100%; height: 100%"
+                    :center="mapCenter"
+                    :zoom="13"
+                    style="width: 100%; height: 100%"
             >
                 <GmapMarker
-                    :position="mapCenter"
-                    :clickable="false"
-                    :draggable="false"
-                    :icon="{url: 'icons/map_marker.svg'}"
+                        :position="mapCenter"
+                        :clickable="false"
+                        :draggable="false"
+                        :icon="{url: 'icons/map_marker.svg', class: 'test'}"
                 />
             </GmapMap>
         </div>
@@ -84,13 +84,10 @@
                     <img :src="'icons/youtube.svg'" alt="youtube link">
                 </a>
                 <a href="#" class="link">
-                    <img :src="'icons/twitter.svg'" alt="twitter link">
+                    <img :src="'icons/telegram.svg'" alt="telegram link">
                 </a>
                 <a href="#" class="link">
                     <img :src="'icons/instagram.svg'" alt="instagram link">
-                </a>
-                <a href="#" class="link">
-                    <img :src="'icons/gplus.svg'" alt="gplus link">
                 </a>
                 <a href="#" class="link">
                     <img :src="'icons/linkedin.svg'" alt="linkedin link">
@@ -105,7 +102,7 @@
     import * as VueGoogleMaps from 'vue2-google-maps';
 
     const CITY_COORDINATES = {
-        'kiev': {lat:50.3986645, lng:30.5145269},
+        'kiev': {lat: 50.3986645, lng: 30.5145269},
         'zaporozhye': {lat: 47.8159257, lng: 35.1685269}
 
     };
@@ -122,9 +119,9 @@
                 this.mapCenter = CITY_COORDINATES[city];
             },
         },
-        data: function() {
+        data: function () {
             return {
-                mapCenter: {lat:50.2716, lng:30.3125}
+                mapCenter: {lat: 50.2716, lng: 30.3125}
             }
         }
     }
@@ -136,6 +133,19 @@
     .contacts {
         height: 700px;
         display: flex;
+        img[src="icons/map_marker.svg"] {
+            position: relative;
+            box-shadow: 10px 10px 10px 10px red;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                background: red;
+            }
+        }
         &__map {
             height: 100%;
             width: 50%;
@@ -154,7 +164,8 @@
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                margin-bottom: 80px;
+                margin-bottom: 146px;
+                margin-left: 30px;
                 li {
                     display: flex;
                     margin-bottom: 30px;
@@ -180,7 +191,7 @@
             border-bottom: none;
             display: flex;
             align-items: center;
-            margin-bottom: 87px;
+            margin-bottom: 60px;
         }
         .nav-tabs .nav-link {
             background: none;
@@ -219,9 +230,9 @@
             padding: 0;
             margin-right: 40px;
         }
-        .social-links{
+        .social-links {
             display: flex;
-            .link{
+            .link {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;

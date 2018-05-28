@@ -7,7 +7,7 @@
                     <div class="faq__item">
                         <div class="flex-container">
                             <div class="faq__icon">
-                                <img src="icons/block.svg" alt="">
+                                <img src="icons/question-speech-bubble.svg" alt="">
                             </div>
                             <div class="faq__title">
                                 {{faqItem.question}}
@@ -69,7 +69,13 @@
             margin-right: 30px;
         }
         &__title {
-
+            color: #52489c;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
         }
         &__desc {
             display: none;

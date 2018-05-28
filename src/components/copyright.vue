@@ -26,6 +26,6 @@
         line-height: 1.88;
         letter-spacing: normal;
         text-align: center;
-        color: #333333;
+        color: #5493c6;
     }
 </style>
