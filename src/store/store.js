@@ -85,35 +85,35 @@ export const store = new Vuex.Store({
                 title: 'Создание приложений под андроид',
                 date: '24 сентября',
                 duration: ['4 месяца', '2 часа / нед.'],
-                price: '1150 грн.'
+                price: '1150  '
             },
             {
                 icon: 'php',
                 title: 'Создание приложений под андроид',
                 date: '24 сентября',
                 duration: ['4 месяца', '2 часа / нед.'],
-                price: '1150 грн.'
+                price: '1150  '
             },
             {
                 icon: 'js',
                 title: 'Создание приложений под андроид',
                 date: '24 сентября',
                 duration: ['4 месяца', '2 часа / нед.'],
-                price: '1150 грн.'
+                price: '1150  '
             },
             {
                 icon: 'php',
                 title: 'Создание приложений под андроид',
                 date: '24 сентября',
                 duration: ['4 месяца', '2 часа / нед.'],
-                price: '1150 грн.'
+                price: '1150  '
             },
             {
                 icon: 'js',
                 title: 'Создание приложений под андроид',
                 date: '24 сентября',
                 duration: ['4 месяца', '2 часа / нед.'],
-                price: '1150 грн.'
+                price: '1150  '
             },
         ],
         faq: [
@@ -171,7 +171,12 @@ export const store = new Vuex.Store({
             commit('increment', text)
         },
         changeCity ({ commit }, city) {
-            commit('changeCity', city)
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    commit('changeCity', city)
+                    resolve()
+                })
+            })
         }
     },
 });

@@ -13,7 +13,7 @@
                 </span>
             </div>
             <transition-group name="fade" tag="div" class="row courses__container">
-                <div class="col-xl-4 col-md-6" v-for="course in courses" :key="course.id">
+                <div class="col-xl-4 col-md-6 d-none" v-for="course in courses" :key="course.id">
                     <div class="courses__item">
                         <div class="courses__item-header">
                             <div class="icon">
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+
     export default {
         name: "our-courses",
         computed: {
@@ -62,12 +63,27 @@
             },
         },
         mounted() {
-            this.$store.dispatch('changeCity', 'kiev');
+            this.$store.dispatch('changeCity', 'kiev').then(() => {
+                this.animatedShow();
+            });
+
         },
         methods: {
             filterCourses(city) {
                 this.activeCity = city;
-                this.$store.dispatch('changeCity', city);
+                this.$store.dispatch('changeCity', city).then(() => {
+                    this.animatedShow();
+                });
+            },
+            animatedShow() {
+                let element = document.getElementsByClassName('d-none')[0];
+                if (!element) {
+                    return;
+                }
+                setTimeout(function(fn) {
+                    element.classList.remove('d-none');
+                    fn();
+                }, 300, this.animatedShow);
             }
         },
         data() {
@@ -145,7 +161,6 @@
             }
         }
         &__container {
-
         }
         &__item {
             background: $white;

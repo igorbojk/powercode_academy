@@ -9,7 +9,7 @@
                 Развивайтесь с нами</h1>
             <div class="action-buttons">
                 <button type="button" class="btn primary large">Записаться на курс</button>
-                <button type="button" class="btn secondary large">Узнай свой уровень</button>
+                <button type="button" class="btn secondary outline large">Узнай свой уровень</button>
             </div>
         </div>
     </section>

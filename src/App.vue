@@ -31,7 +31,6 @@
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: #52489c;
             border-radius: 30px;
             font-size: 20px;
             &.large{
@@ -52,7 +51,30 @@
                 background: $white;
             }
             &.secondary{
-                color: $white;
+                color: $white
+            }
+            &.info{
+                color: #5493c6;
+                border-color: #5493c6;
+            }
+            &.register{
+                color: #52489c;
+                background-color: #def4ff;
+                border-color: #def4ff;
+                padding: 10px 20px;
+                text-transform: uppercase;
+            }
+            &.helper{
+                background: none;
+                border: none;
+                color: #549ee5;
+                font-size: 16px;
+                text-align: center;
+                text-transform: none;
+                padding: 0;
+                width: 150px;
+            }
+            &.outline{
                 background: none;
             }
         }
@@ -93,6 +115,10 @@
         to{
             transform: scale(1);
         }
+    }
+
+    .d-none{
+        display: none;
     }
 
 </style>

@@ -142,7 +142,7 @@
                             <div class="advantages__sub-items top">
                                 <div class="advantages__sub-item">
                                     <div class="icon">
-                                        <img :src="'icons/event.svg'" alt="event icon">
+                                        <img :src="'icons/events.svg'" alt="event icon">
                                         <div class="desc">
                                             участвовать
                                             в наших ивентах
